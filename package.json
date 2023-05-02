@@ -4,7 +4,7 @@
   "description": "<a name=\"readme-top\">CineFlix</a>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watchAll",
     "build": "webpack --mode development",
     "start": "webpack serve --open"
   },
@@ -19,6 +19,7 @@
     "eslint-plugin-import": "^2.27.5",
     "hint": "^7.1.8",
     "html-webpack-plugin": "^5.5.1",
+    "jest": "^29.5.0",
     "style-loader": "^3.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
