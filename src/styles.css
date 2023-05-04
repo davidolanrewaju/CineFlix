@@ -51,7 +51,6 @@ h1 {
 }
 
 .pop-up {
-  display: block;
   position: fixed;
   top: 0;
   left: 0;
