@@ -1,6 +1,6 @@
 import Movies from './getAPI.js';
 // eslint-disable-next-line import/no-cycle
-import { displayCommentsPopup, pop } from './commentPopup.js';
+import { displayCommentsPopup, pop } from './popup.js';
 
 const url = 'https://api.themoviedb.org/3/trending/movie/week?api_key=5b73fb0f47fa9983cf6c63ff8e835442';
 const displayMovies = document.querySelector('.movie_lists');

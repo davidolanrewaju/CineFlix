@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/no-cycle
+import commentSection from './commentSection.js';
+
 const pop = document.querySelector('.pop-up');
 
 const displayCommentsPopup = (movieContainer, movie) => {
@@ -23,20 +26,13 @@ const displayCommentsPopup = (movieContainer, movie) => {
                 </div>
             </div>
         </div>
-        <div class="comment_section">
-            <h3>Comments:(0)</h3>
-            <h3>Add Comment</h3>
-            <form>
-                <input type="text" id="name" value="Your Name"><br>
-                <textarea>Your Comment</textarea><br>
-                <button type="button">Submit</button><br>
-            </form>
-        </div>
       `;
 
+    popUp.appendChild(commentSection());
     pop.setAttribute('style', 'display: block');
 
     pop.appendChild(popUp);
+
     const closeBtn = document.querySelector('.close');
     closeBtn.addEventListener('click', () => {
       pop.style.display = 'none';
