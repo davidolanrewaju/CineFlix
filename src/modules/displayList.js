@@ -15,7 +15,7 @@ const displayList = async () => {
   const movies = await movie.getMovies();
   const listOfMovies = movies.results;
 
-  listOfMovies.forEach((movie) => {
+  listOfMovies.forEach(async (movie) => {
     pop.innerHTML = '';
     const movieContainer = document.createElement('div');
 
@@ -30,7 +30,7 @@ const displayList = async () => {
           <h5 class="movie_info_release-date">${movie.release_date}</h5>
         </div>
       `;
-    movieContainer.appendChild(likeSection(movie));
+    movieContainer.appendChild(await likeSection(movie));
     displayMovies.appendChild(movieContainer);
     displayCommentsPopup(movieContainer, movie);
   });
