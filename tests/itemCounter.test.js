@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import countItems from '../modules/itemCounter.js';
+import countItems from '../src/modules/itemCounter.js';
 
 test('countItems function should set the correct count in the trending container', () => {
   // Set up the DOM for the test
