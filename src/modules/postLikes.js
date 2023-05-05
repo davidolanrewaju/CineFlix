@@ -1,5 +1,5 @@
 import { postLikes, getLikes } from './like-api.js';
-
+// Like Section
 const likeSection = (movie) => {
   const likeElement = document.createElement('div');
   likeElement.classList.add('like_container');
@@ -11,6 +11,7 @@ const likeSection = (movie) => {
         </div>
       `;
 
+  // Display Likes
   const displayLike = async () => {
     const likes = await getLikes();
     const likedItem = likes.find((item) => item.item_id === movie.id);
@@ -21,12 +22,14 @@ const likeSection = (movie) => {
           `;
   };
 
+  // Click eventlistener to post like to API
   const likeBtn = likeElement.querySelector('.favourite');
   likeBtn.addEventListener('click', async () => {
     await postLikes(movie.id);
     displayLike();
   });
 
+  // Display Likes in the HTML DOM
   const displayLikes = document.createElement('div');
   displayLikes.classList.add('display_likes');
   displayLikes.innerHTML = `
