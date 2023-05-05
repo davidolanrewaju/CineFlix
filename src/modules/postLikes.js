@@ -17,7 +17,7 @@ const likeSection = (movie) => {
     const likedItem = likes.find((item) => item.item_id === movie.id);
 
     const numberOfLikes = likeElement.querySelector('.likes');
-    numberOfLikes.innerHTML = `
+    numberOfLikes.textContent = `
             ${likedItem.likes}
           `;
   };
@@ -33,7 +33,7 @@ const likeSection = (movie) => {
   const displayLikes = document.createElement('div');
   displayLikes.classList.add('display_likes');
   displayLikes.innerHTML = `
-    <p>Likes: <span class="likes">${displayLike()}</span></p>
+    <p>Likes: <span class="likes">0</span></p>
   `;
   likeElement.appendChild(displayLikes);
 
