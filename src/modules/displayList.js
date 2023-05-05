@@ -3,7 +3,7 @@ import Movies from './getAPI.js';
 import { displayCommentsPopup, pop } from './popup.js';
 import likeSection from './postLikes.js';
 
-const url = 'https://api.themoviedb.org/3/trending/movie/week?api_key=5b73fb0f47fa9983cf6c63ff8e835442';
+const url = 'https://api.themoviedb.org/3/trending/movie/day?api_key=5b73fb0f47fa9983cf6c63ff8e835442';
 
 const displayMovies = document.querySelector('.movie_lists');
 const movieSection = document.querySelector('#movie_section');

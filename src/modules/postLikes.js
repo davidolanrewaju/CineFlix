@@ -16,6 +16,7 @@ const likeSection = async (movie) => {
     const likes = await getLikes();
     const likedItem = likes.find((item) => item.item_id === movie.id);
     return likedItem?.likes || 0;
+    // Also the same as if(linkedItem){return linkedItem.likes} else{return 0}
   };
 
   // Click eventlistener to post like to API
