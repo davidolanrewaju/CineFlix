@@ -1,4 +1,4 @@
-<a name="readme-top">CineFlix</a>
+# CineFlix
 
 <!--
 HOW TO USE:
