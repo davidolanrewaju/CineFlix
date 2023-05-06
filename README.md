@@ -93,7 +93,7 @@ After you're finished please remove all the comments and instructions!
       <ul>
         <li><a href="https://pages.github.com/">Github Pages</a></li>
         <li><a href="https://github.com/features/actions">Github Actions</a></li>
-        <li><a href="https://git-scm.com/">Git</a></li>
+        <li><a href="https://git-scm.com/">Gt</a></li>
       </ul>
   </details>
   <details>
@@ -227,11 +227,11 @@ If you like this project hit the like button and also hit me up if you need a co
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Special thanks to: 
+Special thanks to:
+
 - [Spencer](https://github.com/skabeo)
 - [Bawa](https://github.com/CaptainBawa)
 - [Adams](https://github.com/Adams-Ghub) for there support in completing this project.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
