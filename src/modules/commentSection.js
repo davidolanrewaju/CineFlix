@@ -7,15 +7,20 @@ const commentSection = async (id) => {
   const data = await getComment(id);
 
   commentElement.innerHTML = `
-
-  &nbsp;Comment&nbsp;(<span id="count"></span>)
-  <h3>Add Comment</h3>
-  <div id="comments"></div>
-  <form id="form-id">
-  <input type="text" value="" id="name" placeholder="Your Name" required><br>
-  <textarea id="comment" placeholder="Enter Text" required></textarea><br>
-  <button type="button" id="submit-btn" >Submit</button><br>
-  </form>
+  <div class="comment_container">
+    <div class="display_comment">
+      <p class="comment_header">Comment (<span id="count"></span>)</p>
+      <div id="comments"></div>
+    </div>
+    <div class="add_comment_container">
+      <h3 class="add_comment">Add Comment</h3>
+      <form id="form-id">
+        <input type="text" value="" id="name" placeholder="Your Name" required><br>
+        <textarea id="comment" placeholder="Enter Text" required></textarea><br>
+        <button type="button" id="submit-btn" >Submit</button><br>
+      </form>
+    </div>
+  </div>
   `;
 
   const commentList = commentElement.querySelector('#comments');
