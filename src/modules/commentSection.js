@@ -1,8 +1,4 @@
-import { addComment ,getComment } from "./getComment.js";
-import commentsCounter from './commentcounter.js';
-
-
-// getData()
+import { addComment, getComment } from './getComment.js';
 
 const commentSection = async (id) => {
   const commentElement = document.createElement('div');
@@ -10,12 +6,9 @@ const commentSection = async (id) => {
 
   const data = await getComment(id);
 
-  const comments = Array.isArray(data) ? data : [data]; 
-  console.log(data);
-  
   commentElement.innerHTML = `
 
-  &nbsp;Comment&nbsp;(<span id="count">${commentsCounter(data)}</span>)
+  &nbsp;Comment&nbsp;(<span id="count"></span>)
   <h3>Add Comment</h3>
   <div id="comments"></div>
   <form id="form-id">
@@ -24,38 +17,42 @@ const commentSection = async (id) => {
   <button type="button" id="submit-btn" >Submit</button><br>
   </form>
   `;
-  
-  const commentList= commentElement.querySelector('#comments');
-  const submitBtn = commentElement.querySelector('#submit-btn');
-  const countComment= commentElement.querySelector('#count');
-  // const itemId = movie.id;
 
-  if (comments !== null) {
-    comments.forEach((comment) => {
-      commentList.innerHTML += `<div>${comment.creation_date} ${comment.username}: ${comment.comment}</div>`;
+  const commentList = commentElement.querySelector('#comments');
+  const submitBtn = commentElement.querySelector('#submit-btn');
+  const countComment = commentElement.querySelector('#count');
+
+  if (data.length > 0) {
+    data.forEach((comment) => {
+      commentList.innerHTML += `<div class="comments-box"  >${comment.creation_date} ${comment.username}: ${comment.comment}</div>`;
     });
   } else {
     commentList.innerHTML = '<div>No comments yet.</div>';
   }
-  
 
-       commentElement.addEventListener('load',() =>{
-      countComment.innerHTML=`${commentsCounter(counter)}`
-    })
-
-    submitBtn.addEventListener('click',() =>{
-      const userName = document.querySelector('#name').value;
+  submitBtn.addEventListener('click', async () => {
+    const userName = document.querySelector('#name').value;
     const comment = document.querySelector('#comment').value;
-    const form = document.querySelector('#form-id')
+    const form = document.querySelector('#form-id');
     if (userName.trim() === '' && comment.trim() === '') {
-      
+      // handle empty input
     } else {
-      addComment(movie.id,userName,comment)
-        }
-form.reset()   
-   })
+      await addComment(id, userName, comment);
+      form.reset();
+      commentList.innerHTML = ''; // clear existing comments
+      const data = await getComment(id); // get updated comments
+      countComment.textContent = data.length; // update comments counter
+      if (data.length > 0) {
+        data.forEach((comment) => {
+          commentList.innerHTML += `<div class="comments-box">${comment.creation_date} ${comment.username}: ${comment.comment}</div>`;
+        });
+      } else {
+        commentList.innerHTML = '<div>No comments yet.</div>';
+      }
+    }
+  });
 
   return commentElement;
 };
 
-export default commentSection; 
+export default commentSection;

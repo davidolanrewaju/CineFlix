@@ -17,7 +17,7 @@ const displayList = async () => {
   const listOfMovies = movies.results;
 
   listOfMovies.forEach(async (movie) => {
-  pop.innerHTML = '';
+    pop.innerHTML = '';
     const movieContainer = document.createElement('div');
 
     movieContainer.classList.add('movie');
@@ -34,8 +34,8 @@ const displayList = async () => {
     movieContainer.appendChild(await likeSection(movie));
     displayMovies.appendChild(movieContainer);
 
-   displayCommentsPopup(movieContainer, movie);
-   countItems();
+    displayCommentsPopup(movieContainer, movie);
+    countItems();
   });
   movieSection.appendChild(displayMovies);
 };

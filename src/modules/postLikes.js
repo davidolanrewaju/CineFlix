@@ -10,7 +10,7 @@ const likeSection = async (movie) => {
             <i class="material-icons favourite">favorite_border</i>
         </div>
       `;
-      
+
   // Display Likes
   const displayLike = async () => {
     const likes = await getLikes();
