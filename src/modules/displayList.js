@@ -16,12 +16,11 @@ const displayList = async () => {
   const movies = await movie.getMovies();
   const listOfMovies = movies.results;
 
-  listOfMovies.forEach( (movie) => {
+  listOfMovies.forEach(async (movie) => {
   pop.innerHTML = '';
     const movieContainer = document.createElement('div');
 
     movieContainer.classList.add('movie');
-    
 
     movieContainer.innerHTML = `
         <div class="movie_poster">
@@ -35,7 +34,8 @@ const displayList = async () => {
     movieContainer.appendChild(await likeSection(movie));
     displayMovies.appendChild(movieContainer);
 
-   displayCommentsPopup(movieContainer, movie, listOfMovies);
+   displayCommentsPopup(movieContainer, movie);
+   countItems();
   });
   movieSection.appendChild(displayMovies);
 };

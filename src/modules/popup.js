@@ -5,12 +5,11 @@ import commentSection from './commentSection.js';
 
 const pop = document.querySelector('.pop-up');
 
-const displayCommentsPopup = (movieContainer, movie, listOfMovies) => {
+const displayCommentsPopup = (movieContainer, movie) => {
   const commentButton = movieContainer.querySelector('.comment_btn');
-  const movieId = movie.id;
-  commentButton.addEventListener('click', async () => {
-      const commentView = await commentSection(movie.id);
-    const popUpView =()=>{
+  commentButton.addEventListener('click', async (e) => {
+    pop.innerHTML = '';
+   console.log(e.target.id);
           const popUp = document.createElement('div');
           popUp.classList.add('comment_popup');
           
@@ -32,8 +31,9 @@ const displayCommentsPopup = (movieContainer, movie, listOfMovies) => {
           </div>
           </div>
           `;
+          const infos = await commentSection(movie.id)
           
-          popUp.appendChild(commentView );
+          popUp.appendChild(infos);
           pop.setAttribute('style', 'display: block');
           
           pop.appendChild(popUp);
@@ -42,14 +42,6 @@ const displayCommentsPopup = (movieContainer, movie, listOfMovies) => {
           closeBtn.addEventListener('click', () => {
               pop.style.display = 'none';
             });
-        } 
-     listOfMovies.find((chosen)=>{
-            if(chosen.id===movieId){
-                return popUpView();
-            }
-        
-        }); 
-
     });
 };
 
