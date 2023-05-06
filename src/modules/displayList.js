@@ -17,7 +17,7 @@ const displayList = async () => {
   const listOfMovies = movies.results;
 
   listOfMovies.forEach( (movie) => {
-    pop.innerHTML = '';
+  pop.innerHTML = '';
     const movieContainer = document.createElement('div');
 
     movieContainer.classList.add('movie');
