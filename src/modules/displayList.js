@@ -33,6 +33,7 @@ const displayList = async () => {
       `;
     movieContainer.appendChild(await likeSection(movie));
     displayMovies.appendChild(movieContainer);
+
     displayCommentsPopup(movieContainer, movie);
     countItems();
   });

@@ -6,7 +6,7 @@ const likeSection = async (movie) => {
 
   likeElement.innerHTML = `
         <div class="comment_btn_container">
-            <button class="comment_btn">Comment</button>
+            <button id='${movie.id}' class="comment_btn">Comment</button>
             <i class="material-icons favourite">favorite_border</i>
         </div>
       `;
