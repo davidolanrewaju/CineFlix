@@ -2,6 +2,7 @@ import Movies from './getAPI.js';
 // eslint-disable-next-line import/no-cycle
 import { displayCommentsPopup, pop } from './popup.js';
 import likeSection from './postLikes.js';
+import countItems from './itemCounter.js';
 
 const url = 'https://api.themoviedb.org/3/trending/movie/day?api_key=5b73fb0f47fa9983cf6c63ff8e835442';
 
@@ -33,6 +34,7 @@ const displayList = async () => {
     movieContainer.appendChild(await likeSection(movie));
     displayMovies.appendChild(movieContainer);
     displayCommentsPopup(movieContainer, movie);
+    countItems();
   });
   movieSection.appendChild(displayMovies);
 };
