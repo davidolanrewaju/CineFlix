@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  margin: auto;
+  padding: 0;
+  font-family: 'Source Sans 3', sans-serif;
+  background-color: #fbfbfb;
+}
+
+.navbar {
+  padding: 10px 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(3, 37, 65);
+}
+
+a,
+li {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  gap: 4rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.nav-list li a {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.nav-list li a:hover {
+  background-color: white;
+  color: rgb(3, 37, 65);
+  font-weight: 500;
+}
+
+.nav-logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  font-variant: small-caps;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+#header-section {
+  background-color: rgba(3, 37, 65, 0.8);
+  padding: 70px 60px;
+  color: white;
+}
+
+.header_content .header_content_head {
+  margin: 0;
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.header_content .header_content_body {
+  font-size: 1.3em;
+  font-weight: 300;
+  margin: 25px 0;
+}
+
+.search {
+  margin: 3rem 0 2rem 0;
+}
+
+#inner_search {
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  font-size: 1.3em;
+  color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+#search_btn {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 46px;
+  padding: 10px 26px;
+  border: none;
+  background: linear-gradient(to right, rgba(30, 213, 169, 1) 0%, rgba(1, 180, 228, 1) 100%);
+  border-radius: 30px;
+  position: absolute;
+  right: 3em;
+  color: #fff;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8em;
+}
+
+#movie_section {
+  margin-top: 2rem;
+  padding: 40px;
+}
+
+.trending_container {
+  color: black;
+  margin: 0 2rem 2.5rem 1.5rem;
+}
+
+.trending_movie {
+  font-weight: 700;
+  font-size: 2rem;
+  border-bottom: 1px solid grey;
+  padding-bottom: 0.6rem;
+}
+
+.movie_lists {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: flex-start;
+  justify-items: center;
+  row-gap: 5rem;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  min-width: 150px;
+}
+
+.movie_info_title {
+  margin: 0 0 19px 0;
+  line-height: 50px;
+}
+
+.movieImg_container img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+@keyframes zoom-in-out {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.movie .movie_poster img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.movie .movie_poster img:hover {
+  animation-name: zoom-in-out;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+}
+
+.movie .movie_info .movie_info_title {
+  margin: 10px 0 0 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.movie .movie_info .movie_info_release-date {
+  margin: 5px 0 15px 0;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.comment_btn_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment_btn {
+  padding: 7px 20px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  color: white;
+  background: rgb(3, 37, 65);
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.comment_btn:hover {
+  background-color: white;
+  border: 2px solid rgb(3, 37, 65);
+  color: rgb(3, 37, 65);
+  font-weight: 600;
+}
+
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(7px);
+  overflow-y: scroll;
+}
+
+.comment_popup {
+  margin: 10% auto;
+  padding: 40px;
+  max-width: 70%;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.movie_display_section {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 30% 65%;
+  column-gap: 5%;
+  align-items: flex-start;
+}
+
+.movie_info_overview {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+.sub_text {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 50% 40%;
+}
+
+.sub_text h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+.sub_text span {
+  font-weight: 700;
+}
+
+.close {
+  font-size: 2.5rem;
+  cursor: default;
+}
+
+.favourite {
+  cursor: pointer;
+}
+
+.display_likes p {
+  font-weight: 700;
+}
+
+.display_likes .likes {
+  font-weight: 400;
+}
+
+.comment_header {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 3rem;
+}
+
+.add_comment {
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+}
+
+#comments {
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+#name {
+  margin-bottom: 2%;
+  padding: 10px 20px 10px 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#comment {
+  padding: 10px 20px 10px 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#name::placeholder,
+#comment::placeholder {
+  font-family: 'Source Sans 3', sans-serif;
+  text-transform: uppercase;
+}
+
+#submit-btn {
+  margin-top: 10px;
+  padding: 10px 25px;
+  outline: none;
+  background-color: rgb(3, 37, 65);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#footer {
+  background-color: rgb(3, 37, 65);
+  padding: 2rem 20rem;
+}
+
+#footer .footer_lists {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer .footer_lists .footer_list {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+#footer .footer_lists .footer_list:hover {
+  border-bottom: 1px solid white;
+}
