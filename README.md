@@ -33,7 +33,7 @@ After you're finished please remove all the comments and instructions!
     - [Tech Stack](#tech-stack)
     - [Tools](#tools)
     - [Key Features](#key-features)
-<!-- - [🚀 Live Demo](#live-demo) -->
+ - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -58,6 +58,12 @@ After you're finished please remove all the comments and instructions!
 
 - A home page showing a list of movies with a 'like' button attaached to it.
 - A popup window with more information on the movie and also allows viewers to make comments on the movie.
+
+![Screenshot (5)](https://user-images.githubusercontent.com/63909901/236642114-ee2128ea-48e2-45ea-9c2a-d03120f14edd.png)
+![Screenshot (6)](https://user-images.githubusercontent.com/63909901/236642153-8636d0c3-d743-4a35-b308-3d6c507c290c.png)
+![Screenshot (7)](https://user-images.githubusercontent.com/63909901/236642166-6672fc50-5122-4f97-80b0-f59249f72be9.png)
+![Screenshot (8)](https://user-images.githubusercontent.com/63909901/236642176-059d9bc7-d912-4596-8652-5396a9bffd6d.png)
+![Screenshot (9)](https://user-images.githubusercontent.com/63909901/236642183-24171bbd-91fd-4c45-8d7b-64144a0600b9.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -115,11 +121,12 @@ After you're finished please remove all the comments and instructions!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO
+<!-- LIVE DEMO -->
 ### 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](https://davidolanrewaju.github.io/Leaderboard/dist/)
+Pending
+<!-- - [Live Demo Link](https://davidolanrewaju.github.io/Leaderboard/dist/) -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -131,6 +138,7 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 <ul>
+
   <li>GitHub Account</li>
   <li>Git installed on your system</li>
   <li>Install all dependencies</li>
