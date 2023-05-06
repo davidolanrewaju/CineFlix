@@ -227,7 +227,11 @@ If you like this project hit the like button and also hit me up if you need a co
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank microverse for the resources provided to make this project easy to execute and my coding partner.
+Special thanks to: 
+- [Spencer](https://github.com/skabeo)
+- [Bawa](https://github.com/CaptainBawa)
+- [Adams](https://github.com/Adams-Ghub) for there support in completing this project.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
