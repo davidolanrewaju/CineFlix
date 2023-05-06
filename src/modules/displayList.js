@@ -13,11 +13,12 @@ const displayList = async () => {
   const movies = await movie.getMovies();
   const listOfMovies = movies.results;
 
-  listOfMovies.forEach((movie) => {
+  listOfMovies.forEach( (movie) => {
     pop.innerHTML = '';
     const movieContainer = document.createElement('div');
 
     movieContainer.classList.add('movie');
+    
 
     movieContainer.innerHTML = `
         <div class="movie_poster">
@@ -32,7 +33,7 @@ const displayList = async () => {
 
     displayMovies.appendChild(movieContainer);
 
-    displayCommentsPopup(movieContainer, movie);
+   displayCommentsPopup(movieContainer, movie, listOfMovies);
   });
   movieSection.appendChild(displayMovies);
 };
